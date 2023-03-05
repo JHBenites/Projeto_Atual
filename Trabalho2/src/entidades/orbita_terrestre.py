@@ -1,12 +1,12 @@
 class OrbitaTerrestre:
-    def __init__(self, empresa, numero_de_orbitas, mobilidade_extraveicular):
+    def __init__(self, passageiros_maximo, numero_de_orbitas, mobilidade_extraveicular):
         self.numero_de_orbitas = numero_de_orbitas if 1 <= numero_de_orbitas <= 6 else -1
-        self.empresa = empresa if empresa in ('Virgin Galactic', 'SpaceX', 'Blue Origin', 'Orion Span',
-                                              'Space Adventures', 'Zero 2 Infinity') else -1
+        self.passageiros_maximo = passageiros_maximo
         self.mobilidade_extraveicular = mobilidade_extraveicular
 
     def __str__(self):
-        return self.empresa + ' - Número de Órbitas: ' + str(self.numero_de_orbitas) +\
+        return 'Número máximo de passageiros: ' + self.passageiros_maximo + \
+            ' - Número de Órbitas: ' + str(self.numero_de_orbitas) +\
             str(self.__to_str_mobilidade_extraveicular__())
 
     def __to_str_mobilidade_extraveicular__(self):
