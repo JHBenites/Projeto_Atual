@@ -1,11 +1,11 @@
 class OrbitaTerrestre:
-    def __init__(self, passageiros_maximo, numero_de_orbitas, mobilidade_extraveicular):
+    def __init__(self, vagas, numero_de_orbitas, mobilidade_extraveicular):
         self.numero_de_orbitas = numero_de_orbitas if 1 <= numero_de_orbitas <= 6 else -1
-        self.passageiros_maximo = passageiros_maximo
+        self.vagas = vagas
         self.mobilidade_extraveicular = mobilidade_extraveicular
 
     def __str__(self):
-        return 'Número máximo de passageiros: ' + self.passageiros_maximo + \
+        return 'Número de vagas contratadas: ' + self.vagas + \
             ' - Número de Órbitas: ' + str(self.numero_de_orbitas) +\
             str(self.__to_str_mobilidade_extraveicular__())
 
