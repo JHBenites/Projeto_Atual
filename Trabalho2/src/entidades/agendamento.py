@@ -18,23 +18,23 @@ def inserir_agendamento(cpf_cliente, empresa_nome, mobilidade_extraveicular, dat
     if agendamento not in agendamentos: agendamentos.append(agendamento)
     else: print('Agendamento já cadastrado --- ' + str(agendamento))
 
-def selecionar_agendamentos(peso = None, mobilidade_extraveicular = None,
-                            nacionalidade_empresa = None, sexo = None):
+def selecionar_agendamentos(mobilidade_extraveicular = None, peso=None,
+                            nacionalidade_empresa = None, vagas = None):
     filtros = 'Filtros: '
-    if peso != None: filtros += 'Peso: ' + str(peso)
+    if vagas != None: filtros += 'Vagas: ' + vagas
     if mobilidade_extraveicular == True :
-        filtros += ' - sem mobilidade'
+        filtros += ' - com mobilidade extraveicular'
     elif mobilidade_extraveicular == False :
-        filtros += ' - com mobilidade'
+        filtros += ' - sem mobilidade extraveicular'
     if nacionalidade_empresa != None : filtros += ' sede em: ' + nacionalidade_empresa
-    if sexo != None: filtros += 'Sexo: ' + sexo
+    if peso != None: filtros += 'Peso: ' + peso
     agendamentos_selecionados = []
     for agendamento in agendamentos:
         if peso != None and agendamento.cliente.peso != peso: continue
         if mobilidade_extraveicular != None and agendamento.mobilidade_extraveicular != mobilidade_extraveicular:\
             continue
         if nacionalidade_empresa != None and agendamento.empresa.nacionalidade != nacionalidade_empresa: continue
-        if sexo != None and agendamento.cliente.sexo != sexo: continue
+        if vagas != None and agendamento.vagas != vagas: continue
         agendamentos_selecionados.append(agendamento)
     return filtros, agendamentos_selecionados
 
@@ -50,8 +50,9 @@ class Agendamento:
     def __str__(self):
         agendamento_str = 'Agendamento do cliente:: ' + str(self.cliente) + 'com a empresa: ' +\
             str(self.empresa) + ' em ' + str(self.vagas) + ' vagas ' + ' no dia: ' + str(self.data) +\
-            'N° de orbitas: ' + str(self.numero_orbitas)+\
+            ' N° de orbitas: ' + str(self.numero_orbitas)+\
             self.__to_str_mobilidade_extraveicular__()
+        return agendamento_str
 
     def __to_str_mobilidade_extraveicular__(self):
         if not self.mobilidade_extraveicular:
