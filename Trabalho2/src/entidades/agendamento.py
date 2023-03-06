@@ -1,7 +1,7 @@
 from entidades.cliente import clientes
 from entidades.empresa import empresas
 
-agendamentos = []
+agendamentos = {}
 
 def get_agendamentos(): return agendamentos
 
@@ -21,7 +21,7 @@ def inserir_agendamento(cpf_cliente, empresa_nome, mobilidade_extraveicular, dat
 def selecionar_agendamentos(peso = None, mobilidade_extraveicular = None,
                             nacionalidade_empresa = None, sexo = None):
     filtros = 'Filtros: '
-    if peso != None: filtros += 'Peso: ' + peso
+    if peso != None: filtros += 'Peso: ' + str(peso)
     if mobilidade_extraveicular == True :
         filtros += ' - sem mobilidade'
     elif mobilidade_extraveicular == False :

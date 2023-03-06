@@ -7,13 +7,12 @@ def inserir_empresa(empresa):
     else: print('Empresa já cadastrada')
 
 class Empresa:
-    def __init__(self, nome, nacionalidade, mobilidade_extraveicular):
+    def __init__(self, nome, nacionalidade):
         self.nome = nome if nome in ('Virgin Galactic', 'SpaceX', 'Blue Origin', 'Orion Span',
                                               'Space Adventures', 'Zero 2 Infinity') else -1
         self.nacionalidade = nacionalidade
-        self.mobilidade_extraveicular = mobilidade_extraveicular
     def __str__(self):
-        empresa_str = self.nome + ' de ' + self.nacionalidade +self.__to_str_mobilidade_extraveicular__()
+        empresa_str = str(self.nome) + ' de ' + str(self.nacionalidade)
         return empresa_str
 
 

@@ -19,12 +19,12 @@ def cadastrar_cliente():
                             Endereço('Rua Presidente Vargas', 192, 'Casa B', 'Jeremias de Paula Eduardo',
                                      'Monte Alto', '75520-020')))
 def cadastrar_empresas() :
-    inserir_empresa(Empresa(nome = 'Virgin Galactic', nacionalidade = 'California', mobilidade_extraveicular = False))
-    inserir_empresa(Empresa('SpaceX', 'California', True))
-    inserir_empresa(Empresa('Blue Origin', 'Washington', True))
-    inserir_empresa(Empresa('Orion Span', 'California', False))
-    inserir_empresa(Empresa('Space Adventures', 'Virgínia', True))
-    inserir_empresa(Empresa('Zero 2 infinity', 'Barcelona', True))
+    inserir_empresa(Empresa(nome = 'Virgin Galactic', nacionalidade = 'California'))
+    inserir_empresa(Empresa('SpaceX', 'California'))
+    inserir_empresa(Empresa('Blue Origin', 'Washington'))
+    inserir_empresa(Empresa('Orion Span', 'California'))
+    inserir_empresa(Empresa('Space Adventures', 'Virgínia'))
+    inserir_empresa(Empresa('Zero 2 infinity', 'Barcelona'))
 
 def cadastrar_agendamentos():
     inserir_agendamento(cpf_cliente = '212.234.571-32', empresa_nome = 'SpaceX', mobilidade_extraveicular = True)
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     imprimir_objetos('--- Clientes cadastrados', get_cliente().values())
     cadastrar_empresas()
     imprimir_objetos('--- Empresas cadastradas', get_empresa().values())
-    imprimir_objetos('--- Agendamentos cadastradas', get_agendamentos().values())
+    imprimir_objetos('--- Agendamentos cadastrados', get_agendamentos().values())
     filtros, agendamentos_selecionados = selecionar_agendamentos()
     imprimir_objetos('Agendamento cadastrados', get_agendamentos())
     filtros, agendamentos_selecionados = selecionar_agendamentos()
