@@ -1,5 +1,6 @@
 empresas = {}
 
+def get_empresa(): return empresas
 def inserir_empresa(empresa):
     nome_empresa = empresa.nome
     if nome_empresa not in empresas.keys(): empresas[nome_empresa] = empresa
@@ -12,8 +13,7 @@ class Empresa:
         self.nacionalidade = nacionalidade
         self.mobilidade_extraveicular = mobilidade_extraveicular
     def __str__(self):
-        empresa_str = self.nome + ' de ' + self.nacionalidade +\
-            str(self.__to_str_mobilidade_extraveicular__())
+        empresa_str = self.nome + ' de ' + self.nacionalidade +self.__to_str_mobilidade_extraveicular__()
         return empresa_str
 
 

@@ -40,14 +40,18 @@ def selecionar_agendamentos(peso = None, mobilidade_extraveicular = None,
 
 
 class Agendamento:
-    def __init__(self, cliente, empresa, mobilidade_extraveicular, data):
+    def __init__(self, cliente, empresa, mobilidade_extraveicular, data, vagas, numero_orbitas):
         self.cliente = cliente
         self.empresa = empresa
         self.mobilidade_extraveicular = mobilidade_extraveicular
         self.data = data
+        self.vagas = vagas
+        self.numero_orbitas = numero_orbitas
     def __str__(self):
         agendamento_str = 'Agendamento do cliente:: ' + str(self.cliente) + 'com a empresa: ' +\
-            str(self.empresa) + ' no dia: ' + str(self.data) + self.__to_str_mobilidade_extraveicular__()
+            str(self.empresa) + ' em ' + str(self.vagas) + ' vagas ' + ' no dia: ' + str(self.data) +\
+            'N° de orbitas: ' + str(self.numero_orbitas)+\
+            self.__to_str_mobilidade_extraveicular__()
 
     def __to_str_mobilidade_extraveicular__(self):
         if not self.mobilidade_extraveicular:
