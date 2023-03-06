@@ -1,11 +1,11 @@
 from entidades.cliente import clientes
 from entidades.empresa import empresas
 
-agendamentos = {}
+agendamentos = []
 
 def get_agendamentos(): return agendamentos
 
-def inserir_agendamento(cpf_cliente, empresa_nome, mobilidade_extraveicular, data):
+def inserir_agendamento(cpf_cliente, empresa_nome, mobilidade_extraveicular, data, vaga, numero_orbitas):
     cliente = clientes[cpf_cliente]
     empresa = empresas[empresa_nome]
     if cliente == None:
@@ -14,7 +14,7 @@ def inserir_agendamento(cpf_cliente, empresa_nome, mobilidade_extraveicular, dat
     if empresa == None:
         print('Erro: Empresa não cadastrada')
         return
-    agendamento = Agendamento(cliente, empresa, mobilidade_extraveicular, data)
+    agendamento = Agendamento(cliente, empresa, mobilidade_extraveicular, data, vaga, numero_orbitas)
     if agendamento not in agendamentos: agendamentos.append(agendamento)
     else: print('Agendamento já cadastrado --- ' + str(agendamento))
 

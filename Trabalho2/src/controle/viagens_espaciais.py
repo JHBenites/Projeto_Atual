@@ -24,14 +24,15 @@ def cadastrar_empresas() :
     inserir_empresa(Empresa('Blue Origin', 'Washington'))
     inserir_empresa(Empresa('Orion Span', 'California'))
     inserir_empresa(Empresa('Space Adventures', 'Virgínia'))
-    inserir_empresa(Empresa('Zero 2 infinity', 'Barcelona'))
+    inserir_empresa(Empresa('Zero 2 Infinity', 'Barcelona'))
 
 def cadastrar_agendamentos():
-    inserir_agendamento(cpf_cliente = '212.234.571-32', empresa_nome = 'SpaceX', mobilidade_extraveicular = True)
-    inserir_agendamento('312.434.775-30', 'Orion Span', mobilidade_extraveicular = False)
-    inserir_agendamento('531.331.740-71', 'SpaceX', mobilidade_extraveicular = True)
-    inserir_agendamento('631.431.740-81', 'Blue Origin', mobilidade_extraveicular = True)
-    inserir_agendamento('641.211.720-81', 'Zero 2 infinity', mobilidade_extraveicular = True)
+    inserir_agendamento(cpf_cliente = '212.234.571-32', empresa_nome = 'SpaceX',
+                        mobilidade_extraveicular = True, data=Data(dia=15,mês=4,ano=2023), vaga=2, numero_orbitas=1)
+    inserir_agendamento('312.434.775-30', 'Orion Span', False, Data(6,3,2023), 1, 3)
+    inserir_agendamento('531.331.740-71', 'SpaceX', True, Data(6,7,2023), 4, 2)
+    inserir_agendamento('631.431.740-81', 'Blue Origin',True, Data(7,9,2024), 5, 2)
+    inserir_agendamento('641.211.720-81', 'Zero 2 Infinity', True, Data(6,3,2023), 1, 1)
 
 def imprimir_objetos(cabeçalho, objetos, filtros = None):
     if filtros == None: print('\n' + cabeçalho)
@@ -43,18 +44,19 @@ if __name__ == '__main__':
     imprimir_objetos('--- Clientes cadastrados', get_cliente().values())
     cadastrar_empresas()
     imprimir_objetos('--- Empresas cadastradas', get_empresa().values())
-    imprimir_objetos('--- Agendamentos cadastrados', get_agendamentos().values())
-    filtros, agendamentos_selecionados = selecionar_agendamentos()
-    imprimir_objetos('Agendamento cadastrados', get_agendamentos())
-    filtros, agendamentos_selecionados = selecionar_agendamentos()
-    imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    filtros, agendamentos_selecionados = selecionar_agendamentos(mobilidade_extraveicular = True )
-    imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    filtros, agendamentos_selecionados = selecionar_agendamentos(True, nacionalidade_empresa = 'California')
-    imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    filtros, agendamentos_selecionados = selecionar_agendamentos(True, 'California', sexo = 'F')
-    imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    filtros, agendamentos_selecionados = selecionar_agendamentos(True,'California', 'F', peso= 65)
+    cadastrar_agendamentos()
+    imprimir_objetos('--- Agendamentos cadastrados', get_agendamentos())
+    # filtros, agendamentos_selecionados = selecionar_agendamentos()
+    # imprimir_objetos('Agendamento cadastrados', get_agendamentos())
+    # filtros, agendamentos_selecionados = selecionar_agendamentos()
+    # imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
+    # filtros, agendamentos_selecionados = selecionar_agendamentos(mobilidade_extraveicular = True )
+    # imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
+    # filtros, agendamentos_selecionados = selecionar_agendamentos(True, nacionalidade_empresa = 'California')
+    # imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
+    # filtros, agendamentos_selecionados = selecionar_agendamentos(True, 'California', sexo = 'F')
+    # imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
+    # filtros, agendamentos_selecionados = selecionar_agendamentos(True,'California', 'F', peso= 65)
 
 
 
