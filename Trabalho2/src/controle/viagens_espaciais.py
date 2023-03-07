@@ -24,9 +24,9 @@ def cadastrar_cliente():
                             Endereço('Rua Sino da Serra', 589, None, 'Porto', 'Caarapó', '74300-000')))
 
 def cadastrar_empresas() :
-    inserir_empresa(Empresa(nome = 'Virgin Galactic', nacionalidade = 'California'))
+    inserir_empresa(Empresa(nome = 'Virgin Galactic', sede='California'))
     inserir_empresa(Empresa('SpaceX', 'California'))
-    inserir_empresa(Empresa('Blue Origin', 'Washington'))
+    inserir_empresa(Empresa('Blue Origin', 'Washington'))       #sede
     inserir_empresa(Empresa('Orion Span', 'California'))
     inserir_empresa(Empresa('Space Adventures', 'Virgínia'))
     inserir_empresa(Empresa('Zero 2 Infinity', 'Barcelona'))
@@ -57,11 +57,11 @@ if __name__ == '__main__':
     imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
     filtros, agendamentos_selecionados = selecionar_agendamentos(mobilidade_extraveicular = True )
     imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    filtros, agendamentos_selecionados = selecionar_agendamentos(True, nacionalidade_empresa = 'California')
+    filtros, agendamentos_selecionados = selecionar_agendamentos(True, sede_empresa= 'California')
     imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    filtros, agendamentos_selecionados = selecionar_agendamentos(True, 'California', peso=65)
-    imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
-    # filtros, agendamentos_selecionados = selecionar_agendamentos(True,'California', 65, vagas = 2)
+    filtros, agendamentos_selecionados = selecionar_agendamentos(True, 'California', peso=65) #peso maximo
+    # imprimir_objetos('Agendamentos selecionados com ', agendamentos_selecionados, filtros)
+    # filtros, agendamentos_selecionados = selecionar_agendamentos(True,'California', 65)
 
 
 

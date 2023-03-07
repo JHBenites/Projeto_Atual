@@ -16,7 +16,7 @@ class Cliente:
         self.endereço = endereço
 
     def __str__(self):
-        return self.nome + ' - PESO:' + str(self.peso) + ' - CPF:' + self.cpf + ' - nascimento:'\
+        return self.nome + ' - Peso:' + str(self.peso) + ' - CPF:' + self.cpf + ' - nascimento:'\
             +str(self.data_nascimento) + ' - sexo:' + self.__to_str_sexo__()\
             +'\n         - residente em:: ' + str(self.endereço)
 
