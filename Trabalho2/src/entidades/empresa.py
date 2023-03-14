@@ -1,5 +1,4 @@
 empresas = {}
-
 def get_empresa(): return empresas
 def inserir_empresa(empresa):
     nome_empresa = empresa.nome
