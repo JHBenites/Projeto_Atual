@@ -1,4 +1,4 @@
-iclass Viagem:
+class Viagem:
     def __init__(self, mobilidade_extraveicular, id):
         self.mobilidade_extraveicular = mobilidade_extraveicular
         self.id = id
