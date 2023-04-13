@@ -9,3 +9,9 @@ class Aluno:
                                                              'divorciado',
                                                              'viúvo') else 'indefinido'
         self.estrangeiro = estrangeiro
+
+    def __str__(self):
+        return self.nome + ' -- ano de nascimento: ' +str(self.ano_nascimento)
+    + ' - sexo: ' + self.__to_str_sexo++()\
+    +' - estado civil: ' + self.__to_str_estado_civil__()
+    +self.__to_str_estrangeiro__()
