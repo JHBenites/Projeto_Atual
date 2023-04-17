@@ -13,8 +13,8 @@ class Aluno:
     def __str__(self):
         return self.nome + ' -- ano de nascimento: ' + str(self.ano_nascimento)\
     + ' - sexo: ' + self.__to_str_sexo__()\
-    +' - estado civil: ' + self.__to_str_estado_civil__()\
-    +self.__to_str_estrangeiro__()
+    + ' - estado civil: ' + self.__to_str_estado_civil__() \
+    + self.__to_str_estrangeiro__()
 
     def __to_str_sexo__(self):
         if self.sexo == 'M': return 'masculino'
@@ -28,10 +28,15 @@ class Aluno:
             else: return 'indefinido'
         else: return self.estado_civil + '/a'
 
-    def __to_str_estrangeiro_(self):
+    def __to_str_estrangeiro__(self):
         if not self.estrangeiro: return ''
         else:
             if self.sexo == 'M': return ' - estrangeiro'
             elif self.sexo == 'F': return ' - estrangeira'
             else: return ' - estrangeiro/a'
-   
+
+alunos = []
+
+def get_alunos(): return alunos
+
+def inserir_aluno(aluno): alunos.append(aluno)
