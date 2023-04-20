@@ -34,4 +34,9 @@ class PC:
         self.p11=p11
 
     def __str__(self):
-        return f'{self.nome:_^20}' + '\n'
+        return f'|{self.nome:_^20}|' + f'\n|{self.processador:_<10}{self.p1:_>10}|'\
+        +f'\n|{self.mainboard:_<10}{self.p2:_>10}|'+f'\n|{self.water_cooler:_<10}{self.p3:_>10}|'\
+        +f'\n|{self.ram:_<10}{self.p4:_>10}|'+f'\n|{self.ssd:_<10}{self.p5:_>10}|'\
+        +f'\n|{self.fonte:_<10}{self.p6:_>10}|'+f'\n|{self.gabinete:_<10}{self.p7:_>10}|'\
+        +f'\n|{self.nobreak:_<10}{self.p8:_>10}|'+f'\n|{self.monitor:_<10}{self.p9:_>10}|'\
+        +f'\n|{self.placa_video:_<10}{self.p10:_>10}|'+f'\n|{self.mini_monitor:_<10}{self.p11:_>10}|'
