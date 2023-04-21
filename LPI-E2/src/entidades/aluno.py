@@ -1,4 +1,4 @@
-class Aluno:
+    class Aluno:
     def __init__(self, nome, ano_nascimento, sexo, estado_civil, estrangeiro):
         self.nome = nome
         self.ano_nascimento = ano_nascimento if ano_nascimento > 1950 else -1

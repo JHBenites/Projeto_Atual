@@ -39,4 +39,22 @@ class PC:
         +f'\n|{self.ram:_<10}{self.p4:_>10}|'+f'\n|{self.ssd:_<10}{self.p5:_>10}|'\
         +f'\n|{self.fonte:_<10}{self.p6:_>10}|'+f'\n|{self.gabinete:_<10}{self.p7:_>10}|'\
         +f'\n|{self.nobreak:_<10}{self.p8:_>10}|'+f'\n|{self.monitor:_<10}{self.p9:_>10}|'\
-        +f'\n|{self.placa_video:_<10}{self.p10:_>10}|'+f'\n|{self.mini_monitor:_<10}{self.p11:_>10}|'
+        +f'\n|{self.__to_str_placa_video__():_<10}{self.p10:_>10}|'+f'\n|{self.__to_str_mini_monitor__():_<10}{self.p11:_>10}|'
+
+    def __to_str_mini_monitor__(self):
+        if not self.mini_monitor: return ''
+        else:
+            +f'\n|{self.mini_monitor:_<10}{self.p11:_>10}|'
+
+    def __to_str_placa_video__(self):
+        if not self.placa_video : return ''
+        else:
+            +f'\n{self.placa_video:_<10}{self.p10:_>10}'
+
+pcs=[]
+
+def get_pcs(): return pcs
+
+def inserir_pcs(pc): pcs.append(pc)
+
+
