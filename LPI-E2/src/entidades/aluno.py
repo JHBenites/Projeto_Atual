@@ -35,8 +35,8 @@ class Aluno:
             elif self.sexo == 'F': return ' - estrangeira'
             else: return ' - estrangeiro/a'
 
-alunos = []
+alunos = []     #cria lista de alunos
 
-def get_alunos(): return alunos
+def get_alunos(): return alunos         #retorna lista de alunos
 
-def inserir_aluno(aluno): alunos.append(aluno)
+def inserir_aluno(aluno): alunos.append(aluno)    #insere aluno na lista alunos
