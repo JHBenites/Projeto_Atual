@@ -4,9 +4,9 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/../Meus-Projetos/Trabalho2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/LPI-E2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Trabalho/Declaração/Aprendendo_novo/LPI-E2/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/nsrc" />
-      <excludeFolder url="file://$MODULE_DIR$/LPI-E2/src/Teste" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Trabalho/Declaração/Aprendendo_novo/LPI-E2/src/Teste" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
