@@ -26,14 +26,14 @@ margin = Canvas(root, width=500, bg='#ffc8dd', height=100,
                bd=0, highlightthickness=0, relief='ridge')
 margin.pack()
 text_id = Label(root, bg='#ffc8dd', text='Você é feia?',
-                fg='#590d22', font=('Montserrat', 14, 'bold'))
+                fg='#590d22', font=('Montserrat', 24, 'bold'))
 text_id.pack()
 button_1 = tk.Button(root, text='Não', bg='#ffb3c1', command=denied,
-                     relief=RIDGE, bd=3, font=('Montserrat', 12, 'bold'))
+                     relief=RIDGE, bd=3, font=('Montserrat', 8, 'bold'))
 button_1.pack()
 root.bind('<Motion>', move_button_1)
 button_2 = tk.Button(root, text='Sim', bg='#ffb3c1', relief=RIDGE,
-                     bd=3, command=accepted, font=('Montserrat', 18, 'bold'))
+                     bd=3, command=accepted, font=('Montserrat', 14, 'bold'))
 button_2.pack()
 
 root.mainloop()
