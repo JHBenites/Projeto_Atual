@@ -6,7 +6,7 @@ from tkinter import messagebox
 import interface
 
 root = tk.Tk()
-root.title('Aceitas?')
+root.title('Me prove')
 root.geometry('600x600')
 root.configure(background='#ffc8dd')
 
@@ -34,6 +34,7 @@ button_1 = tk.Button(root, text='Não', bg='#ffb3c1', command=denied,
 if interface.button_1:
     button_1.pack()
     root.bind('<Motion>', move_button_1)
+else
 
 button_2 = tk.Button(root, text='Sim', bg='#ffb3c1', relief=RIDGE,
                      bd=3, command=accepted, font=('Montserrat', 14, 'bold'))
